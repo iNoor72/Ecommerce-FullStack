@@ -194,13 +194,12 @@ function App() {
       <div class="container">
         <h2>Vegtables</h2>
         <center>
-          <button class="custom-button" onClick={openVegPage()}>Shop Now</button>
+          <button class="custom-button" onClick={openVegPage()}> Shop Now </button>
         </center>
       </div>
     </div>
   </div>
 </div>
-
 </BrowserRouter>
 
   );
