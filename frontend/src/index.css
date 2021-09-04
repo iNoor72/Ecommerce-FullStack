@@ -1,3 +1,5 @@
+/* Home Screen */
+
 * {
   border: 0;
   box-sizing: border-box;
@@ -53,7 +55,7 @@ a {
   padding: 20px 0px;
   text-align: center;
 }
-.container a {
+.container button {
   color: rgb(230, 173, 19);
 }
 .catagory {
@@ -68,16 +70,19 @@ a {
   width: 120px;
   height: 40px;
   margin: 7% 0;
-  padding: 10px 0px;
+  padding: 0px 0px;
   border-radius: 10px;
   font-weight: bolder;
   cursor: pointer;
-}
-.custom-button a{
   vertical-align: middle;
 }
+
 .custom-button:hover {
   background-color: white;
   color: black;
   border: 1px solid black;
 }
+
+
+/* Login */
+

@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { Component }  from 'react';
+import React from 'react';
+import Product from './Screens/Product';
+import {BrowserRouter,Route,Link} from 'react-router-dom'
 
 function App() {
     if (document.readyState == "loading") {
@@ -28,10 +30,6 @@ function App() {
         var button = addBtn[i];
         button.addEventListener("click", addToCartClicked);
       }
-    
-     //   document
-       // .getElementsByClassName("btn-purchase")[0]
-        //.onClick("click", purchaseClicked);
     }
     
     var quantityList = [];
@@ -48,8 +46,6 @@ function App() {
           "cart-quantity-input"
         )[0];
         var quantity = quantityElement.value;
-    
-    
     
         var titles = document.getElementsByClassName("cart-item-title");
         
@@ -157,7 +153,16 @@ function App() {
       return total;
     }
 
+    const openFruitPage = () => {
+      
+    }
+
+    const openVegPage = () => {
+      
+    }
+
   return (
+    <BrowserRouter>
   <div>
   <nav id="navbar">
     <header class="header">
@@ -169,31 +174,31 @@ function App() {
       </div>
     </main>
     </header>
-
   </nav>
   <div class="clear"></div>
+
   <div class="catagory">
-    
     <div class="card">
       <img id="pic" src="./images/veg1.jpeg" alt="Fruits" />
       <div class="container">
         <h2>Fruits</h2>
         <center>
-          <div class="custom-button"><a href="fruits.php">shop now</a></div>
+          <button class="custom-button" onClick={openFruitPage()}>Shop Now</button>
         </center>
       </div>
     </div>
     <div class="card">
-      <img id="pic" src="./images/veg2.jpg" alt="Vegtables" />
+      <img id="pic" src="./images/veg2.jpg" alt="Vegetables" />
       <div class="container">
         <h2>Vegtables</h2>
         <center>
-          <div class="custom-button"> <a href="vegs.php">shop now</a></div>
+          <button class="custom-button" onClick={openVegPage()}> Shop Now </button>
         </center>
       </div>
     </div>
   </div>
 </div>
+</BrowserRouter>
 
   );
 }
