@@ -47,8 +47,6 @@ function App() {
         )[0];
         var quantity = quantityElement.value;
     
-    
-    
         var titles = document.getElementsByClassName("cart-item-title");
         
         var title = titles[i].innerText;
