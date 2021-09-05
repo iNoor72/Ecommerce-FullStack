@@ -1,11 +1,7 @@
-/* Home Screen */
-
-* {
-  border: 0;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
 
 .NavButtons {
   color: blue;
@@ -23,7 +19,7 @@
   align-items: center;
 }
 
-.header > div{
+.Brand{
   color: white;
   font-size: 30px;
   font-weight: bold;
@@ -37,9 +33,10 @@
 a {
   text-decoration: none;
 }
-.clear {
-  clear: both;
-}
+
+/* Home Screen */
+
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   transition: 0.3s;
@@ -86,5 +83,4 @@ a {
 }
 
 
-/* Login */
-
+/* Login Screen */

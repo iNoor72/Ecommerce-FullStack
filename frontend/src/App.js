@@ -160,60 +160,23 @@ function App() {
       return total;
     }
 
-    const openFruitPage = () => {
-      
-    }
-
-    const openVegPage = () => {
-      
-    }
-    const navigateToLogin = () => {
-      <Link to="/login"></Link>
-    }
-    
-
   return (
     <BrowserRouter>
   <div>
-    <Route path="/" exact component={HomeScreen}/>
   <nav id="navbar">
     <header className="header">
-    <div> Estabena </div>
-    <main id="menu">
+    <Link to="/"><div className="Brand"> Estabena </div></Link>
       <div className="links">
         <Route path="/login" component={LoginScreen} />
         <Route path="/register" component={RegisterScreen} />
         <Link to= "/login"><button className="NavButtons">Login</button></Link>
         <Link to= "/register"><button className="NavButtons">Register</button></Link>
       </div>
-    </main>
     </header>
   </nav>
   <div className="clear"></div>
-
-  <div className="catagory">
-    <Route path="/vegetables" component={VegScreen} />
-    <Route path="/fruits" component={FruitScreen} />
-    <div className="card">
-      <img id="pic" src="./images/veg1.jpeg" alt="Fruits" />
-      <div className="container">
-        <h2>Fruits</h2>
-        <center>
-        <Link to= "/fruits"><button className="custom-button">Shop Now</button></Link>
-        </center>
-      </div>
-    </div>
-    <div className="card">
-      <img id="pic" src="./images/veg2.jpg" alt="Vegetables" />
-      <div className="container">
-        <h2>Vegtables</h2>
-        <center>
-        <Link to= "/vegetables"><button className="custom-button">Shop Now</button></Link>
-        </center>
-      </div>
-    </div>
-  </div>
 </div>
+<Route path="/" exact component={HomeScreen}/>
 </BrowserRouter>
 
   );

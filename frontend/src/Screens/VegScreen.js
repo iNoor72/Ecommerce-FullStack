@@ -1,7 +1,7 @@
 import React from "react";
 
 function VegScreen(props) {
-    return <div>Veg page</div>
+    return <main className="VegetableProducts"> </main>
 }
 
 export default VegScreen;
