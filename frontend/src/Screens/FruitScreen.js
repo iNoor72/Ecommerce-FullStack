@@ -32,6 +32,34 @@ function FruitScreen(props) {
             <div className="ProductPrice">5EG/kilo</div>
         </li>
 
+        <li>
+            <div className="Product"></div>
+            <img src="./images/avocado.jpg" className="ProductImage"/>
+            <div className="ProductName">Avocado</div>
+            <div className="ProductPrice">25EG/kilo</div>
+        </li>
+
+        <li>
+            <div className="Product"></div>
+            <img src="./images/cherry.jpg" className="ProductImage"/>
+            <div className="ProductName">Cherry</div>
+            <div className="ProductPrice">15EG/kilo</div>
+        </li>
+
+        <li>
+            <div className="Product"></div>
+            <img src="./images/kiwi.png" className="ProductImage"/>
+            <div className="ProductName">Kiwi</div>
+            <div className="ProductPrice">12EG/kilo</div>
+        </li>
+
+        <li>
+            <div className="Product"></div>
+            <img src="./images/mango.jpeg" className="ProductImage"/>
+            <div className="ProductName">Mango</div>
+            <div className="ProductPrice">15EG/kilo</div>
+        </li>
+
        
 
     </ul>

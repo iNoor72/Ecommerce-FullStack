@@ -25,6 +25,27 @@ function VegScreen(props) {
             <div className="ProductPrice">8EG/kilo</div>
         </li>
 
+        <li>
+            <div className="Product"></div>
+            <img src="./images/tomato.jpg" className="ProductImage"/>
+            <div className="ProductName">Tomato</div>
+            <div className="ProductPrice">4EG/kilo</div>
+        </li>
+
+        <li>
+            <div className="Product"></div>
+            <img src="./images/cucumber.jpg" className="ProductImage"/>
+            <div className="ProductName">Cucumber</div>
+            <div className="ProductPrice">8EG/kilo</div>
+        </li>
+
+        <li>
+            <div className="Product"></div>
+            <img src="./images/lettuce.jpg" className="ProductImage"/>
+            <div className="ProductName">Lettuce</div>
+            <div className="ProductPrice">2EG/piece</div>
+        </li>
+
        
 
     </ul>
