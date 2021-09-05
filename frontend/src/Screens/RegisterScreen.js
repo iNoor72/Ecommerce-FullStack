@@ -8,7 +8,7 @@ function RegisterScreen(props) {
         <input type="text" name="email" title="email" type="email" placeholder="Email" required className="registerEmailText"/>
         <input type="password" name="password" title="password" placeholder="Password" required className="registerpasswordText"/>
         <button type="submit" name="submit" class="btn">Register</button>
-        <button type="button" class="Cancelbtn">Cancel</button>
+        <button type="button" class="btn">Cancel</button>
     </form>
     <div id="demo"></div>
 </div>
