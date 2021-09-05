@@ -1,6 +1,12 @@
+  /* Navbar */
+  
   * {
     box-sizing: border-box;
     margin: 0;
+  }
+
+  #root {
+    width: 100%;
   }
 
 .NavButtons {
@@ -26,17 +32,11 @@
   margin-left: 4em;
 }
 
-#pic{
-  width: 100%;
-}
-
 a {
   text-decoration: none;
 }
 
 /* Home Screen */
-
-
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   transition: 0.3s;
@@ -48,6 +48,10 @@ a {
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
+
+#pic{
+  width: 100%;
 }
 
 .container {
@@ -81,6 +85,6 @@ a {
   color: black;
   border: 1px solid black;
 }
-
-
 /* Login Screen */
+
+

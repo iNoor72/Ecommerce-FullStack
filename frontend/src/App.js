@@ -9,6 +9,7 @@ import VegScreen from './Screens/VegScreen';
 import FruitScreen from './Screens/FruitScreen';
 import CartScreen from './Screens/CartScreen';
 import {BrowserRouter,Route,Link} from 'react-router-dom'
+import CheckoutScreen from './Screens/CheckoutScreen';
 
 
 function App() {
@@ -167,8 +168,6 @@ function App() {
     <header className="header">
     <Link to="/"><div className="Brand"> Estabena </div></Link>
       <div className="links">
-        <Route path="/login" component={LoginScreen} />
-        <Route path="/register" component={RegisterScreen} />
         <Link to= "/login"><button className="NavButtons">Login</button></Link>
         <Link to= "/register"><button className="NavButtons">Register</button></Link>
       </div>
@@ -176,7 +175,13 @@ function App() {
   </nav>
   <div className="clear"></div>
 </div>
-<Route path="/" exact component={HomeScreen}/>
+<Route path="/" exact={true} component={HomeScreen}/>
+<Route path="/vegetables" exact component={VegScreen}/>
+<Route path="/fruits" exact component={FruitScreen}/>
+<Route path="/login" component={LoginScreen} />
+<Route path="/register" component={RegisterScreen} />
+<Route path="/cart" component={CartScreen} />
+<Route path="/checkout" component={CheckoutScreen} />
 </BrowserRouter>
 
   );
