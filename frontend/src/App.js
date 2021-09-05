@@ -1,8 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Product from './Screens/Product';
+import HomeScreen from './Screens/HomeScreen';
+import ProductScreen from './Screens/ProductScreen';
+import LoginScreen from './Screens/LoginScreen'
+import RegisterScreen from './Screens/RegisterScreen'
+import VegScreen from './Screens/VegScreen';
+import FruitScreen from './Screens/FruitScreen';
+import CartScreen from './Screens/CartScreen';
 import {BrowserRouter,Route,Link} from 'react-router-dom'
+
 
 function App() {
     if (document.readyState == "loading") {
@@ -114,14 +121,14 @@ function App() {
         }
       }
       var cartRowContents = `
-          <div class="cart-item cart-column">
-              <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
-              <span class="cart-item-title">${title}</span>
+          <div className="cart-item cart-column">
+              <img className="cart-item-image" src="${imageSrc}" width="100" height="100">
+              <span className="cart-item-title">${title}</span>
           </div>
-          <span class="cart-price cart-column">${price}</span>
-          <div class="cart-quantity cart-column">
-              <input class="cart-quantity-input" type="number" value="1">
-              <button class="btn btn-danger" type="button">REMOVE</button>
+          <span className="cart-price cart-column">${price}</span>
+          <div className="cart-quantity cart-column">
+              <input className="cart-quantity-input" type="number" value="1">
+              <button className="btn btn-danger" type="button">REMOVE</button>
           </div>`;
       cartRow.innerHTML = cartRowContents;
       cartItems.append(cartRow);
@@ -160,39 +167,48 @@ function App() {
     const openVegPage = () => {
       
     }
+    const navigateToLogin = () => {
+      <Link to="/login"></Link>
+    }
+    
 
   return (
     <BrowserRouter>
   <div>
+    <Route path="/" exact component={HomeScreen}/>
   <nav id="navbar">
-    <header class="header">
-    <a href="index.html"> Estabena </a>
+    <header className="header">
+    <div> Estabena </div>
     <main id="menu">
-      <div class="links">
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
+      <div className="links">
+        <Route path="/login" component={LoginScreen} />
+        <Route path="/register" component={RegisterScreen} />
+        <Link to= "/login"><button className="NavButtons">Login</button></Link>
+        <Link to= "/register"><button className="NavButtons">Register</button></Link>
       </div>
     </main>
     </header>
   </nav>
-  <div class="clear"></div>
+  <div className="clear"></div>
 
-  <div class="catagory">
-    <div class="card">
+  <div className="catagory">
+    <Route path="/vegetables" component={VegScreen} />
+    <Route path="/fruits" component={FruitScreen} />
+    <div className="card">
       <img id="pic" src="./images/veg1.jpeg" alt="Fruits" />
-      <div class="container">
+      <div className="container">
         <h2>Fruits</h2>
         <center>
-          <button class="custom-button" onClick={openFruitPage()}>Shop Now</button>
+        <Link to= "/fruits"><button className="custom-button">Shop Now</button></Link>
         </center>
       </div>
     </div>
-    <div class="card">
+    <div className="card">
       <img id="pic" src="./images/veg2.jpg" alt="Vegetables" />
-      <div class="container">
+      <div className="container">
         <h2>Vegtables</h2>
         <center>
-          <button class="custom-button" onClick={openVegPage()}> Shop Now </button>
+        <Link to= "/vegetables"><button className="custom-button">Shop Now</button></Link>
         </center>
       </div>
     </div>

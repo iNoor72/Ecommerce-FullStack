@@ -1,7 +1,7 @@
 import React from "react";
 
-function Product(props) {
+function ProductScreen(props) {
     return <div>Product page</div>
 }
 
-export default Product;
+export default ProductScreen;

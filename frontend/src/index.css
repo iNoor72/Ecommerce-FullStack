@@ -6,6 +6,15 @@
   margin: 0;
   padding: 0;
 }
+
+.NavButtons {
+  color: blue;
+  font-size: 25px;
+  grid-area: main;
+  margin-right: 25px;
+  background-color: #0cb474;
+}
+
 .header {
   height: 50px;
   background-color: #0cb474;
@@ -14,18 +23,11 @@
   align-items: center;
 }
 
-.header > a{
+.header > div{
   color: white;
   font-size: 30px;
   font-weight: bold;
   margin-left: 4em;
-}
-
-.links > a{
-  color: blue;
-  font-size: 25px;
-  grid-area: main;
-  margin-right: 20px;
 }
 
 #pic{
