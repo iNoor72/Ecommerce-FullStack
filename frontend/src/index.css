@@ -1,7 +1,23 @@
+  /* Navbar */
+  
   * {
     box-sizing: border-box;
     margin: 0;
+    
   }
+
+  /* body::after {
+    content: "";
+    background: url("https://shorturl.at/cfp89");
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  */
 
 .NavButtons {
   color: blue;
@@ -26,19 +42,13 @@
   margin-left: 4em;
 }
 
-#pic{
-  width: 100%;
-}
-
 a {
   text-decoration: none;
 }
 
 /* Home Screen */
-
-
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.9);
   transition: 0.3s;
   width: 30%;
   height: 60vh;
@@ -47,7 +57,11 @@ a {
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+}
+
+#pic{
+  width: 100%;
 }
 
 .container {
@@ -81,6 +95,131 @@ a {
   color: black;
   border: 1px solid black;
 }
+/* Login & Register Screens */
 
+.log-form {
+  width: 40%;
+  min-width: 320px;
+  max-width: 600px;
+  background: #fff;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 40em) {
+  .log-form {
+    width: 95%;
+    position: relative;
+    margin: 2.5% auto 0 auto;
+    left: 0%;
+    transform: translate(0%, 0%);
+  }
+}
+.log-form form {
+  display: block;
+  width: 100%;
+  padding: 2em;
+}
+.log-form h2 {
+  color: #5d5d5d;
+  font-family: "open sans condensed";
+  font-size: 30px;
+  display: block;
+  background: #2a2a2a;
+  width: 100%;
+  padding: 0.75em 1em 0.75em 1.5em;
+  box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.05);
+  border: 1px solid #1d1d1d;
+  margin: 0;
+  font-weight: 200;
+}
+.log-form input {
+  display: block;
+  margin: auto auto;
+  width: 100%;
+  margin-bottom: 2em;
+  padding: 0.5em 0;
+  border: none;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 1.25em;
+  color: #757575;
+}
+.log-form input:focus {
+  outline: none;
+}
+.log-form .btn {
+  display: inline-block;
+  background: #1fb5bf;
+  border: 1px solid #1ba0a9;
+  padding: 0.5em 2em;
+  color: white;
+  margin-right: 15em;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+.log-form .btn:hover {
+  background: #23cad5;
+}
+.log-form .btn:active {
+  background: #1fb5bf;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.log-form .btn:focus {
+  outline: none;
+}
+.log-form .forgot {
+  color: #33d3de;
+  line-height: 0.5em;
+  position: relative;
+  top: 2.5em;
+  text-decoration: none;
+  font-size: 0.75em;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+.log-form .forgot:hover {
+  color: #1ba0a9;
+}
 
-/* Login Screen */
+.register-btn {
+  float: right;
+}
+
+/* Veg & Fruit Screens */
+
+.Products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Products li {
+  list-style-type: none;
+  padding: 0;
+  flex: 0 1 20rem;
+  margin: 1rem;
+}
+.Product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.ProductName {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.ProductPrice{
+  font-size: 23px;
+  font-weight: bold;
+}
+.ProductImage {
+  max-width: 34rem;
+  max-height: 34rem;
+  height: 200px;
+  width: 200px;
+}
+

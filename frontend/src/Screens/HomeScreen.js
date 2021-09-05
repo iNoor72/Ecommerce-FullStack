@@ -23,7 +23,5 @@ function HomeScreen(props) {
       </div>
     </div>
   </div>
-
 }
-
 export default HomeScreen;
