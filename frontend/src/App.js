@@ -173,7 +173,6 @@ function App() {
       </div>
     </header>
   </nav>
-  <div className="clear"></div>
 </div>
 
 <Route path="/" exact={true} component={HomeScreen}/>
@@ -181,8 +180,11 @@ function App() {
 <Route path="/fruits" exact component={FruitScreen}/>
 <Route path="/login" component={LoginScreen} />
 <Route path="/register" component={RegisterScreen} />
+<Route path="/vegetables/:id" component={ProductScreen} />
+<Route path="/fruits/:id" component={ProductScreen} />
 <Route path="/cart" component={CartScreen} />
 <Route path="/checkout" component={CheckoutScreen} />
+
 </BrowserRouter>
 
   );

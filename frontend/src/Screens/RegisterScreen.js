@@ -7,6 +7,7 @@ function RegisterScreen(props) {
         <input type="text" name="username" id="username" title="username" placeholder="Username" required className="registerUsernameText"/>
         <input type="text" name="email" title="email" type="email" placeholder="Email" required className="registerEmailText"/>
         <input type="password" name="password" title="password" placeholder="Password" required className="registerpasswordText"/>
+        <input type="text" name="address" title="address" placeholder="Address" requited className="registerAddressText" />
         <button type="submit" name="submit" class="btn">Register</button>
         <button type="button" class="btn">Cancel</button>
     </form>

@@ -1,0 +1,11 @@
+import React from "react";
+import fruits from "../fruits";
+import { Link } from "react-router-dom";
+
+function FruitProductScreen(props) {
+    const fruitProduct = fruits.products.find(x => x.id === props.match.params.id)
+  
+    return <div>Hello</div>
+}
+
+export default FruitProductScreen;

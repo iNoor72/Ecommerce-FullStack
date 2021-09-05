@@ -1,7 +1,7 @@
 import React from "react";
 
 function ProductScreen(props) {
-    return <div>Product page</div>
+    return <div>Heelo</div>
 }
 
 export default ProductScreen;

@@ -1,31 +1,21 @@
 import React from "react";
+import vegetables from "../vegetables";
+import {Link} from 'react-router-dom'
 
 function VegScreen(props) {
     return <main className="VegetableProducts"> 
     <div className="content">
     <ul className="Products">
-        <li>
+        {
+    vegetables.products.map (product => 
+                <li>
             <div className="Product"></div>
-            <img src="./images/potato.jpg" className="ProductImage"/>
-            <div className="ProductName">Potato</div>
-            <div className="ProductPrice">10EG/kilo</div>
-        </li>
-
-        <li>
-            <div className="Product"></div>
-            <img src="./images/lemon.jpg" className="ProductImage"/>
-            <div className="ProductName">Lemon</div>
-            <div className="ProductPrice">20EG/kilo</div>
-        </li>
-
-        <li>
-            <div className="Product"></div>
-            <img src="./images/onion.jpg" className="ProductImage"/>
-            <div className="ProductName">Onion</div>
-            <div className="ProductPrice">8EG/kilo</div>
-        </li>
-
-       
+            <img src={product.image} className="ProductImage"/>
+            <Link to= {'/vegetables/' + product.id} className="ProductName">{product.name}</Link>
+            <div className="ProductPrice">{product.price}</div>
+                </li>               
+                )
+        }
 
     </ul>
     
