@@ -1,11 +1,16 @@
-/* Home Screen */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
 
-* {
-  border: 0;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.NavButtons {
+  color: blue;
+  font-size: 25px;
+  grid-area: main;
+  margin-right: 25px;
+  background-color: #0cb474;
 }
+
 .header {
   height: 50px;
   background-color: #0cb474;
@@ -14,18 +19,11 @@
   align-items: center;
 }
 
-.header > a{
+.Brand{
   color: white;
   font-size: 30px;
   font-weight: bold;
   margin-left: 4em;
-}
-
-.links > a{
-  color: blue;
-  font-size: 25px;
-  grid-area: main;
-  margin-right: 20px;
 }
 
 #pic{
@@ -35,9 +33,10 @@
 a {
   text-decoration: none;
 }
-.clear {
-  clear: both;
-}
+
+/* Home Screen */
+
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   transition: 0.3s;
@@ -84,5 +83,4 @@ a {
 }
 
 
-/* Login */
-
+/* Login Screen */
