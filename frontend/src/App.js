@@ -175,6 +175,7 @@ function App() {
   </nav>
   <div className="clear"></div>
 </div>
+
 <Route path="/" exact={true} component={HomeScreen}/>
 <Route path="/vegetables" exact component={VegScreen}/>
 <Route path="/fruits" exact component={FruitScreen}/>

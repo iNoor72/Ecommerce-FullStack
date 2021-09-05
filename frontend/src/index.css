@@ -85,6 +85,24 @@ a {
   color: black;
   border: 1px solid black;
 }
-/* Login Screen */
+/* Login & Register Screens */
 
+.log-form {
+  margin: 12% 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
 
+.LoginHeader {
+  margin: 12px 12px;
+  font-size: 30px;
+}
+
+.passwordText, .usernameText{
+  margin: 12px 12px;
+}
+
+.registerUsernameText, .registerEmailText, .registerpasswordText {
+  margin: 12px 12px;
+}
+
+/* Veg & Fruit Screens */

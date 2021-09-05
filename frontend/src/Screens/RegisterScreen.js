@@ -2,8 +2,8 @@ import React from "react";
 
 function RegisterScreen(props) {
     return <div class="log-form">
-    <h2>Register for new Account</h2>
-    <form method="post" id="form1">
+    <h2>Register for a new account</h2>
+    <form method="post" id="form">
         <input type="text" name="username" id="username" title="username" placeholder="Username" required />
         <input type="text" name="email" title="email" type="email" placeholder="Email" required />
         <input type="password" name="password" title="password" placeholder="Password" required />
