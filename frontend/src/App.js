@@ -168,6 +168,7 @@ function App() {
     <header className="header">
     <Link to="/"><div className="Brand"> Estabena </div></Link>
       <div className="links">
+        <Link to= "/cart"><button className="NavButtons">Cart</button></Link>
         <Link to= "/login"><button className="NavButtons">Login</button></Link>
         <Link to= "/register"><button className="NavButtons">Register</button></Link>
       </div>
@@ -186,7 +187,6 @@ function App() {
 <Route path="/checkout" component={CheckoutScreen} />
 
 </BrowserRouter>
-
   );
 }
 

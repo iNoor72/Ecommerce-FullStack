@@ -12,7 +12,7 @@ function VegProductScreen(props) {
         <div>
         <img src={product.image} alt="ProductImage" className="ProductImage"></img>
         </div>
-        <div>
+        <div className="InfoList">
             <ul>
                 <li>
                     <h4 className="ProductName">{product.name}</h4>
@@ -40,13 +40,12 @@ function VegProductScreen(props) {
                         <option>4</option>
                     </select>
                 </li>
-                
+
+                <li>
                 <Link to="/cart" className="CartButton">Add to Cart</Link>
-
+                </li>
             </ul>
-
-
-
+            
         </div>
 
     </div>

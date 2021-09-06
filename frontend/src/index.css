@@ -248,20 +248,39 @@ a {
   flex: 1 1 30rem;
 }
 
-.ProductDetails ul, .DetailsActions ul {
-  border: 2px black solid;
-  background-color: white;
-  display: flex;
+.InfoList ul{
   flex-direction: column;
-  margin-left: 120px;
+  list-style-type: none;
+  margin-left: 80px;
+  box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.9);
+  height: 100px;
+  width: 200px;
+  max-width: 500px;
+  background-color: white;
+  padding: 13px;
+}
+
+.DetailsActions ul {
+  margin-left: 700px;
+  box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.9);
+  height: 200px;
+  width: 200px;
+  background-color: white;
+}
+
+.DetailsActions li {
+  font-size: 20px;
+  padding-top: 20px;
   list-style-type: none;
 }
 
-.ProductImage {
-  flex: 2 1 50rem;
+.CartButton {
+  font-size: 25px;
+  background-color: orange;
+  color: black;
 }
 
-.ProductImage img {
-  max-width: 60rem;
-  width: 100%;
+.ProductDetails img {
+  height: 550px;
+  width: 600px;
 }
