@@ -130,7 +130,6 @@ a {
   font-size: 30px;
   display: block;
   background: #2a2a2a;
-  width: 100%;
   padding: 0.75em 1em 0.75em 1.5em;
   box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.05);
   border: 1px solid #1d1d1d;
@@ -138,9 +137,9 @@ a {
   font-weight: 200;
 }
 .log-form input {
-  display: block;
+  
   margin: auto auto;
-  width: 100%;
+  width: 90%;
   margin-bottom: 2em;
   padding: 0.5em 0;
   border: none;
@@ -150,7 +149,9 @@ a {
 }
 .log-form input:focus {
   outline: none;
+
 }
+
 .log-form .btn {
   display: inline-block;
   background: #1fb5bf;
