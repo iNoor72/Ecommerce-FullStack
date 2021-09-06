@@ -22,6 +22,7 @@ function HomeScreen(props) {
         </center>
       </div>
     </div>
+
   </div>
 }
 export default HomeScreen;

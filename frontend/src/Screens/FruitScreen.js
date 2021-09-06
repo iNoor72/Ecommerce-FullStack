@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 
 function FruitScreen(props) {
     return <main className="FruitProducts"> 
+    <div><Link to='/' className="ProductBackButton">⬅️ Back to home screen</Link></div>
     <div className="content">
     <ul className="Products">
         {
