@@ -1,8 +1,6 @@
   /* Navbar */
-  * {
-    box-sizing: border-box;
+  * {   
     margin: 0;
-    
   }
 
   body {
@@ -42,7 +40,7 @@
 
 .Brand{
   color: white;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: bold;
   margin-left: 4em;
 }
@@ -83,7 +81,6 @@ a {
 .custom-button {
   font-size: 15px;
   background-color: black;
-  color: white;
   text-transform: uppercase;
   width: 120px;
   height: 40px;
@@ -284,3 +281,5 @@ a {
   height: 550px;
   width: 600px;
 }
+
+/* Cart Screen */
