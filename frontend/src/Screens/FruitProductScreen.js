@@ -1,12 +1,12 @@
 import React from "react";
-import vegetables from "../vegetables";
 import { Link } from "react-router-dom";
+import fruits from "../fruits";
 
-function VegProductScreen(props) {
-    const product = vegetables.products.find(veg => veg.id == props.match.params.id)
+function FruitProductScreen(props) {
+    const product = fruits.products.find(x => x.id == props.match.params.id)
 
     return <div>
-    <div><Link to='/vegetables' className="ProductBackButton">⬅️ Back to vegetables screen</Link></div>
+    <div><Link to='/fruits' className="ProductBackButton">⬅️ Back to fruits screen</Link></div>
 
     <div className="ProductDetails">
         <div>
@@ -45,14 +45,11 @@ function VegProductScreen(props) {
 
             </ul>
 
-
-
         </div>
 
     </div>
 
     </div>
-
 }
 
-export default VegProductScreen;
+export default FruitProductScreen;

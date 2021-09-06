@@ -230,4 +230,38 @@ a {
 
 /* Product Details Screen */
 
+.ProductBackButton {
+  margin: 10px 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
 
+.ProductDetails {
+  display: flex;
+  margin-left: 80px;
+  margin-top: 50px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.DetailsActions {
+  flex: 1 1 30rem;
+}
+
+.ProductDetails ul, .DetailsActions ul {
+  border: 2px black solid;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-left: 120px;
+  list-style-type: none;
+}
+
+.ProductImage {
+  flex: 2 1 50rem;
+}
+
+.ProductImage img {
+  max-width: 60rem;
+  width: 100%;
+}
