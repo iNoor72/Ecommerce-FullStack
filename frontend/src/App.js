@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import HomeScreen from './Screens/HomeScreen';
-import ProductScreen from './Screens/ProductScreen';
 import LoginScreen from './Screens/LoginScreen'
 import RegisterScreen from './Screens/RegisterScreen'
 import VegScreen from './Screens/VegScreen';
@@ -10,6 +9,8 @@ import FruitScreen from './Screens/FruitScreen';
 import CartScreen from './Screens/CartScreen';
 import {BrowserRouter,Route,Link} from 'react-router-dom'
 import CheckoutScreen from './Screens/CheckoutScreen';
+import VegProductScreen from './Screens/VegProductScreen';
+import FruitProductScreen from './Screens/FruitProductScreen';
 
 
 function App() {
@@ -18,7 +19,6 @@ function App() {
     } else {
       ready();
     }
-    
     
     function ready() {
       var removeBtn = document.getElementsByClassName("btn-danger");
@@ -168,6 +168,7 @@ function App() {
     <header className="header">
     <Link to="/"><div className="Brand"> Estabena </div></Link>
       <div className="links">
+        <Link to= "/cart"><button className="NavButtons">Cart</button></Link>
         <Link to= "/login"><button className="NavButtons">Login</button></Link>
         <Link to= "/register"><button className="NavButtons">Register</button></Link>
       </div>
@@ -180,13 +181,12 @@ function App() {
 <Route path="/fruits" exact component={FruitScreen}/>
 <Route path="/login" component={LoginScreen} />
 <Route path="/register" component={RegisterScreen} />
-<Route path="/vegetables/:id" component={ProductScreen} />
-<Route path="/fruits/:id" component={ProductScreen} />
+<Route path="/vegetables/:id" component={VegProductScreen} />
+<Route path="/fruits/:id" component={FruitProductScreen} />
 <Route path="/cart" component={CartScreen} />
 <Route path="/checkout" component={CheckoutScreen} />
 
 </BrowserRouter>
-
   );
 }
 
