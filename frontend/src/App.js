@@ -183,7 +183,7 @@ function App() {
 <Route path="/register" component={RegisterScreen} />
 <Route path="/vegetables/:id" component={VegProductScreen} />
 <Route path="/fruits/:id" component={FruitProductScreen} />
-<Route path="/cart" component={CartScreen} />
+<Route path="/cart/:id?" component={CartScreen} />
 <Route path="/checkout" component={CheckoutScreen} />
 
 </BrowserRouter>
