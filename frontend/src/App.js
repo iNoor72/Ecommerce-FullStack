@@ -11,7 +11,7 @@ import {BrowserRouter,Route,Link} from 'react-router-dom'
 import CheckoutScreen from './Screens/CheckoutScreen';
 import VegProductScreen from './Screens/VegProductScreen';
 import FruitProductScreen from './Screens/FruitProductScreen';
-
+import ProductsScreen from './Screens/ProductsScreen';
 
 function App() {
     if (document.readyState == "loading") {
@@ -185,7 +185,7 @@ function App() {
 <Route path="/fruits/:id" component={FruitProductScreen} />
 <Route path="/cart/:id?" component={CartScreen} />
 <Route path="/checkout" component={CheckoutScreen} />
-
+<Route path="/products" component={ProductsScreen} />
 </BrowserRouter>
   );
 }
