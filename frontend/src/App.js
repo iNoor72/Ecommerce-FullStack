@@ -9,8 +9,7 @@ import FruitScreen from './Screens/FruitScreen';
 import CartScreen from './Screens/CartScreen';
 import {BrowserRouter,Route,Link} from 'react-router-dom'
 import CheckoutScreen from './Screens/CheckoutScreen';
-import VegProductScreen from './Screens/VegProductScreen';
-import FruitProductScreen from './Screens/FruitProductScreen';
+import ProductScreen from './Screens/ProductScreen';
 import ProductsScreen from './Screens/ProductsScreen';
 
 function App() {
@@ -181,8 +180,7 @@ function App() {
 <Route path="/fruits" exact component={FruitScreen}/>
 <Route path="/login" component={LoginScreen} />
 <Route path="/register" component={RegisterScreen} />
-<Route path="/vegetables/:id" component={VegProductScreen} />
-<Route path="/fruits/:id" component={FruitProductScreen} />
+<Route path="/product/:id" component={ProductScreen} />
 <Route path="/cart/:id?" component={CartScreen} />
 <Route path="/checkout" component={CheckoutScreen} />
 <Route path="/products" component={ProductsScreen} />

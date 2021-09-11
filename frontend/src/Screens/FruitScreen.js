@@ -40,7 +40,7 @@ function FruitScreen(props) {
                 <li>
             <div className="Product"></div>
             <img src={product.image} className="ProductImage"/>
-            <Link to= {'/fruits/' + product.id} className="ProductName">{product.name}</Link>
+            <Link to= {'/product/' + product._id} className="ProductName">{product.name}</Link>
             <div className="ProductPrice">{product.price}</div>
                 </li>
                 )
