@@ -13,7 +13,6 @@ function ProductsScreen(props) {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
   const [image, setImage] = useState('');
-  const [brand, setBrand] = useState('');
   const [category, setCategory] = useState('');
   const [countInStock, setCountInStock] = useState('');
   const [description, setDescription] = useState('');
@@ -53,19 +52,19 @@ function ProductsScreen(props) {
     setPrice(product.price);
     setDescription(product.description);
     setImage(product.image);
-    setBrand(product.brand);
     setCategory(product.category);
     setCountInStock(product.countInStock);
   };
   const submitHandler = (e) => {
     e.preventDefault();
+    var ncategory = category ? category : 'vegetables';
     dispatch(
       saveProduct({
         _id: id,
         name,
         price,
         image,
-        category,
+        category: ncategory,
         countInStock,
         description,
       })
@@ -147,16 +146,6 @@ function ProductsScreen(props) {
                 {uploading && <div>Uploading...</div>}
               </li>
               <li>
-                <label htmlFor="brand">Brand</label>
-                <input
-                  type="text"
-                  name="brand"
-                  value={brand}
-                  id="brand"
-                  onChange={(e) => setBrand(e.target.value)}
-                ></input>
-              </li>
-              <li>
                 <label htmlFor="countInStock">CountInStock</label>
                 <input
                   type="text"
@@ -168,13 +157,10 @@ function ProductsScreen(props) {
               </li>
               <li>
                 <label htmlFor="name">Category</label>
-                <input
-                  type="text"
-                  name="category"
-                  value={category}
-                  id="category"
-                  onChange={(e) => setCategory(e.target.value)}
-                ></input>
+                <select name="category" id="category" value={category} onChange={(e) => setCategory(e.target.value)}>
+                  <option value="vegetables">Vegetables</option>
+                  <option value="fruits">Fruits</option>
+                </select>
               </li>
               <li>
                 <label htmlFor="description">Description</label>
@@ -204,6 +190,40 @@ function ProductsScreen(props) {
         </div>
       )}
 
+      <div className="product-list">
+        <table className="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {products.map((product) => (
+              <tr key={product._id}>
+                <td>{product._id}</td>
+                <td>{product.name}</td>
+                <td>{product.price}</td>
+                <td>{product.category}</td>
+                <td>
+                  <button className="button" onClick={() => openModal(product)}>
+                    Edit
+                  </button>{' '}
+                  <button
+                    className="button"
+                    onClick={() => deleteHandler(product)}
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
     </div>
   );
