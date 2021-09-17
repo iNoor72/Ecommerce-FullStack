@@ -16,11 +16,7 @@ const __dirname = dirname(__filename);
 
 const mongodbUrl = config.MONGODB_URL;
 mongoose
-  .connect(mongodbUrl, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-  })
+  .connect(mongodbUrl)
   .catch((error) => console.log(error.reason));
 
 const app = express();

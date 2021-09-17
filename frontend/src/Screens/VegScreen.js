@@ -1,26 +1,49 @@
-import React from "react";
-import vegetables from "../vegetables";
-import {Link} from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { listProducts } from '../actions/productActions';
 
 function VegScreen(props) {
+
+    const [searchKeyword, setSearchKeyword] = useState('');
+    const [sortOrder, setSortOrder] = useState('');
+    const category = props.match.params.id ? props.match.params.id : '';
+    const productList = useSelector((state) => state.productList);
+    const { products, loading, error } = productList;
+    const dispatch = useDispatch();
+    useEffect(() => {
+      dispatch(listProducts('vegetables'));
+  
+      return () => {
+        //
+      };
+    }, [category]);
+  
+    const submitHandler = (e) => {
+      e.preventDefault();
+      dispatch(listProducts(category, searchKeyword, sortOrder));
+    };
+    const sortHandler = (e) => {
+      setSortOrder(e.target.value);
+      dispatch(listProducts(category, searchKeyword, sortOrder));
+    };
+  
+
     return <main className="VegetableProducts"> 
     <div><Link to='/' className="ProductBackButton">⬅️ Back to home screen</Link></div>
     <div className="content">
     <ul className="Products">
         {
-    vegetables.products.map (product => 
+            products.map (product => 
                 <li>
             <div className="Product"></div>
             <img src={product.image} className="ProductImage"/>
-            <Link to= {'/vegetables/' + product.id} className="ProductName">{product.name}</Link>
+            <Link to= {'/product/' + product._id} className="ProductName">{product.name}</Link>
             <div className="ProductPrice">{product.price}</div>
-                </li>               
+                </li>
                 )
         }
-
     </ul>
-    
-
     </div>
  
     </main>
