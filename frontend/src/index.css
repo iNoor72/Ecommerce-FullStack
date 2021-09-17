@@ -342,3 +342,22 @@ font-weight: bold;
   cursor: pointer;
   background-color: white;
 }
+
+/* Checkout Screen */
+.checkout-container {
+  font-size: 25px;
+  padding: 2rem;
+  margin: 15rem;
+  text-align: center;
+  background-color: #0cb474;
+}
+
+.checkout-container p {
+  margin-top: 20px;
+  color: white;
+}
+
+.checkout-container h3 {
+  color: black;
+  font-weight: bold;
+}
