@@ -11,8 +11,16 @@ import {BrowserRouter,Route,Link} from 'react-router-dom'
 import CheckoutScreen from './Screens/CheckoutScreen';
 import ProductScreen from './Screens/ProductScreen';
 import ProductsScreen from './Screens/ProductsScreen';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { logout } from './actions/userActions';
 function App() {
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
+  const dispatch = useDispatch();
+  const handleLogout = () => {
+    dispatch(logout());
+  }
+
     if (document.readyState == "loading") {
       document.addEventListener("DOMContentLoaded", ready);
     } else {
@@ -168,8 +176,20 @@ function App() {
     <Link to="/"><div className="Brand"> Estabena </div></Link>
       <div className="links">
         <Link to= "/cart"><button className="NavButtons">Cart</button></Link>
+
+
+      {userInfo && userInfo.isAdmin && (
+        <Link to= "/products"><button className="NavButtons">Update Products</button></Link>
+      )}
+      {userInfo ? (
+       <button type="button" onClick={handleLogout} className="NavButtons">Logout</button>
+      ) : (
         <Link to= "/login"><button className="NavButtons">Login</button></Link>
+      )}
+
+      {!userInfo &&(
         <Link to= "/register"><button className="NavButtons">Register</button></Link>
+      )}
       </div>
     </header>
   </nav>

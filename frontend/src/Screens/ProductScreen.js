@@ -64,10 +64,8 @@ function ProductScreen(props) {
                         <h4 className="ProductName">{product.name}</h4>
                     </li>
                     <li>
-                        <p className="ProductPrice">{product.price}</p>
-                    </li>
-                    <li>
-                        Description:
+                      <br/>
+                        <h4>Description:</h4>
                         <div>{product.description}</div>
                     </li>
                 </ul>

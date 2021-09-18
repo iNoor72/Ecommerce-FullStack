@@ -10,9 +10,9 @@
   
   body::after {
     content: "";
-    background: url("https://img.freepik.com/free-photo/abstract-blur-organic-fresh-fruits-vegetable-grocery-shelves-supermarket-store-defocused-bokeh-light-background_293060-3149.jpg?size=626&ext=jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background: url("https://img.freepik.com/free-photo/abstract-blur-organic-fresh-fruits-vegetable-grocery-shelves-supermarket-store-defocused-bokeh-light-background_293060-3149.jpg?size=626&ext=jpg") no-repeat center center fixed;
+    background-repeat: repeat-y;
+    background-size: cover;
     opacity: 0.5;
     top: 0;
     left: 0;
@@ -259,7 +259,7 @@ a {
 }
 
 .DetailsActions ul {
-  margin-left: 700px;
+  margin-left: 100px;
   box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.9);
   height: 200px;
   width: 200px;
@@ -360,4 +360,102 @@ font-weight: bold;
 .checkout-container h3 {
   color: black;
   font-weight: bold;
+}
+
+/* Products */
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.content-margined {
+  margin: 1rem;
+}
+
+.table {
+  width: 100%;
+}
+th {
+  text-align: left;
+}
+tbody > tr:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+/* forms */
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 32rem;
+  padding: 2rem;
+  border: 0.1rem #c0c0c0 solid;
+  border-radius: 0.5rem;
+  list-style-type: none;
+}
+.form-container li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+input {
+  padding: 1rem;
+  border: 0.1rem #c0c0c0 solid;
+  border-radius: 0.5rem;
+}
+
+
+/* stuff*/
+button {
+  font-size: 1.1rem;
+}
+.full-width {
+  width: 100%;
+}
+#root {
+  height: 100%;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+
+.brand a {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main {
+  grid-area: main;
+}
+.footer {
+  grid-area: footer;
+  background-color: #203040;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #ff8000;
 }

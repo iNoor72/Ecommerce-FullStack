@@ -41,7 +41,7 @@ function FruitScreen(props) {
             <div className="Product"></div>
             <img src={product.image} className="ProductImage"/>
             <Link to= {'/product/' + product._id} className="ProductName">{product.name}</Link>
-            <div className="ProductPrice">{product.price}</div>
+            <div className="ProductPrice">{product.price} EG/kg</div>
                 </li>
                 )
         }
