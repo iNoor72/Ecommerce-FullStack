@@ -58,20 +58,12 @@ function ProductScreen(props) {
       ) : (
           <div className="ProductDetails">
             <img src={product.image} alt="ProductImage" className="ProductImage"></img>
-            <div className="InfoList">
-                <ul>
-                    <li>
-                        <h4 className="ProductName">{product.name}</h4>
-                    </li>
-                    <li>
-                      <br/>
-                        <h4>Description:</h4>
-                        <div>{product.description}</div>
-                    </li>
-                </ul>
-            </div>
+
             <div className="DetailsActions">
               <ul>
+              <li>
+                        <h4 className="ProductName">{product.name}</h4>
+                    </li>
                 <li>Price: {product.price}</li>
                 <li>
                   Status:{' '}

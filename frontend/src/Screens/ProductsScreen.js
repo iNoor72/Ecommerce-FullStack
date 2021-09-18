@@ -15,7 +15,6 @@ function ProductsScreen(props) {
   const [image, setImage] = useState('');
   const [category, setCategory] = useState('');
   const [countInStock, setCountInStock] = useState('');
-  const [description, setDescription] = useState('');
   const [uploading, setUploading] = useState(false);
   const productList = useSelector((state) => state.productList);
   const { loading, products, error } = productList;
@@ -50,7 +49,6 @@ function ProductsScreen(props) {
     setId(product._id);
     setName(product.name);
     setPrice(product.price);
-    setDescription(product.description);
     setImage(product.image);
     setCategory(product.category);
     setCountInStock(product.countInStock);
@@ -66,7 +64,6 @@ function ProductsScreen(props) {
         image,
         category: ncategory,
         countInStock,
-        description,
       })
     );
   };
@@ -161,15 +158,6 @@ function ProductsScreen(props) {
                   <option value="vegetables">Vegetables</option>
                   <option value="fruits">Fruits</option>
                 </select>
-              </li>
-              <li>
-                <label htmlFor="description">Description</label>
-                <textarea
-                  name="description"
-                  value={description}
-                  id="description"
-                  onChange={(e) => setDescription(e.target.value)}
-                ></textarea>
               </li>
               <li>
                 <button type="submit" className="button primary">

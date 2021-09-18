@@ -67,7 +67,6 @@ router.put('/:id', isAuth, isAdmin, async (req, res) => {
     product.image = req.body.image;
     product.category = req.body.category;
     product.countInStock = req.body.countInStock;
-    product.description = req.body.description;
     const updatedProduct = await product.save();
     if (updatedProduct) {
       return res
@@ -95,7 +94,6 @@ router.post('/', isAuth, isAdmin, async (req, res) => {
     image: req.body.image,
     category: req.body.category,
     countInStock: req.body.countInStock,
-    description: req.body.description,
     rating: req.body.rating,
     numReviews: req.body.numReviews,
   });

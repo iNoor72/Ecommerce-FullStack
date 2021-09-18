@@ -5,7 +5,6 @@ import bodyParser from 'body-parser';
 import config from './config.js';
 import userRoute from './routes/userRoute.js';
 import productRoute from './routes/productRoute.js';
-import orderRoute from './routes/orderRoute.js';
 import uploadRoute from './routes/uploadRoute.js';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -26,7 +25,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/uploads', uploadRoute);
 app.use('/api/users', userRoute);
 app.use('/api/products', productRoute);
-app.use('/api/orders', orderRoute);
 app.get('/api/config/paypal', (req, res) => {
   res.send(config.PAYPAL_CLIENT_ID);
 });
