@@ -31,7 +31,7 @@ function LoginScreen(props) {
     <form onSubmit={submitHandler} id="form">
     {loading && <div>Loading...</div>}
           {error && <div>{error}</div>}
-        <input type="text" title="username" name="username" placeholder="Username" className="usernameText" onChange={(e) => setEmail(e.target.value)}/>
+        <input type="text" title="username" name="username" placeholder="ِEmail" className="usernameText" onChange={(e) => setEmail(e.target.value)}/>
         <input type="password" title="password" name="password" placeholder="Password" className="passwordText" onChange={(e) => setPassword(e.target.value)}/>
         <button type="submit" class="btn">Login</button>
     </form>
