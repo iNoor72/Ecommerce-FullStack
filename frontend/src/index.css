@@ -3,11 +3,6 @@
     margin: 0;
   }
 
-  body {
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-  
   body::after {
     content: "";
     background: url("https://img.freepik.com/free-photo/abstract-blur-organic-fresh-fruits-vegetable-grocery-shelves-supermarket-store-defocused-bokeh-light-background_293060-3149.jpg?size=626&ext=jpg") no-repeat center center fixed;
@@ -244,6 +239,7 @@ a {
 
 .DetailsActions {
   flex: 1 1 30rem;
+  margin-left: 20rem;
 }
 
 .InfoList ul{
@@ -293,6 +289,10 @@ a {
 .cart-list {
   flex: 3 1 60rem;
 }
+.cart-delete-button {
+  margin-left: 15px;
+}
+
 .cart-action {
   flex: 1 1 20rem;
   background-color: #0cb474;
@@ -368,6 +368,10 @@ font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  background-color: #0cb474;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: white;
 }
 
 .content-margined {
@@ -391,6 +395,7 @@ tbody > tr:nth-child(odd) {
   justify-content: center;
   align-items: center;
   height: 100%;
+  color: white;
 }
 .form-container {
   display: flex;
@@ -400,6 +405,7 @@ tbody > tr:nth-child(odd) {
   border: 0.1rem #c0c0c0 solid;
   border-radius: 0.5rem;
   list-style-type: none;
+  background-color:#0cb474;
 }
 .form-container li {
   display: flex;
@@ -411,6 +417,14 @@ input {
   padding: 1rem;
   border: 0.1rem #c0c0c0 solid;
   border-radius: 0.5rem;
+}
+
+.form label {
+  margin-bottom: 5px;
+}
+
+.product-list {
+  background-color: white;
 }
 
 

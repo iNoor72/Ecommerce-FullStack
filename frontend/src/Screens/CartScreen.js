@@ -52,14 +52,13 @@ function CartScreen(props) {
               </div>
               <div className="cart-name">
                 <div>
-                  <Link to={"/product/" + item.product}>
+                  <Link style={{fontSize:25}} to={"/product/" + item.product}>
                     {item.name}
                   </Link>
-
                 </div>
-                <div>
+                <div style={{fontSize:18}}>
                   Qty:
-                <select value={item.qty} onChange={(e) => dispatch(addToCart(item.product, e.target.value))}>
+                <select style={{marginLeft:5}} value={item.qty} onChange={(e) => dispatch(addToCart(item.product, e.target.value))}>
                     {[...Array(item.countInStock).keys()].map(x =>
                       <option key={x + 1} value={x + 1}>{x + 1}</option>
                     )}
