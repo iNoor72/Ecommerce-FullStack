@@ -153,7 +153,7 @@ a {
   border: 1px solid #1ba0a9;
   padding: 0.5em 2em;
   color: white;
-  margin-right: 15em;
+  margin-right: 10rem;
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2);
 }
 .log-form .btn:hover {

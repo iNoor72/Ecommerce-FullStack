@@ -41,7 +41,7 @@ function CartScreen(props) {
       </li>
       {
         cartItems.length === 0 ?
-          <div>
+          <div style={{fontSize:30, fontWeight:'bold'}}>
             Cart is empty
         </div>
           :
